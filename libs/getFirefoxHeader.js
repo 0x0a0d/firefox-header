@@ -1,12 +1,13 @@
 const getFirefoxVersions = require('./getFirefoxVersions');
 
-const getFirefoxHeader = async (os = 'win') => {
-    let firefoxVersions;
-    try {
-        firefoxVersions = await getFirefoxVersions();
-    }
-    catch (e) {
-        throw e;
+const getFirefoxHeader = async (os = 'win', firefoxVersions) => {
+    if (firefoxVersions == null) {
+        try {
+            firefoxVersions = await getFirefoxVersions();
+        }
+        catch (e) {
+            throw e;
+        }
     }
     const {LATEST_FIREFOX_VERSION} = firefoxVersions;
     let rv = LATEST_FIREFOX_VERSION.split('.').slice(0, 2).join('.');

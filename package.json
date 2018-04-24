@@ -1,12 +1,12 @@
 {
   "name": "firefox-header",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.3",
+  "description": "Firefox Headers Object used in request module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["firefox", "header"],
   "repository": {
     "type": "git",
     "url": "https://github.com/0x0a0d/firefox-header"
